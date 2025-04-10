@@ -1,0 +1,236 @@
+/* Reset de margens e padding */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    padding-bottom: 0; /* Remove o padding de baixo */
+}
+
+/* Container de largura limitada */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px; /* Aumentei o padding para dar mais espaço */
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 6px solid #28a745;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.hero .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero .logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #ddd;
+    font-weight: 300;
+}
+
+/* Main Content Section */
+main {
+    padding: 40px 0;
+    flex-grow: 1; /* Faz o conteúdo principal crescer para ocupar o espaço disponível */
+}
+
+/* Cards de produtos */
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+    font-size: 2rem;
+    color: #ff7f00;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Descrição Batocera V40 */
+.v40-description {
+    font-size: 1.15rem;
+    color: #ddd;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Layout em grid para os produtos V40 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    color: #ff7f00;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    margin-top: auto; /* Faz o footer ir para o final da página */
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 6px solid #28a745;
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+footer .support {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+footer .whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #25d366;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid #25d366;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer .whatsapp img {
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+footer .whatsapp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .card h2 {
+        font-size: 1.6rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+
+    .box h3 {
+        font-size: 1.1rem;
+    }
+
+    .box .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    footer .whatsapp {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+
+    footer .whatsapp img {
+        width: 20px;
+        margin-right: 5px;
+    }
+}
